@@ -16,4 +16,6 @@ RSpec.configure do |config|
   config.after(:each) do |example|
     DatabaseCleaner.clean
   end
+  config.include FactoryGirl::Syntax::Methods
+  Faker::Config.locale = :en
 end
