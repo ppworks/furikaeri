@@ -12,7 +12,7 @@ RSpec.describe Project do
     it do
       expect {
         subject
-      }.to raise_error(ActiveRecord::RecordNotUnique)
+      }.not_to raise_error
     end
   end
 end
