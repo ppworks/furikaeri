@@ -10,4 +10,9 @@ gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
   gem 'spring'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'capybara'
 end
