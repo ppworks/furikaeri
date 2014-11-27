@@ -1,0 +1,14 @@
+%h1
+  = project.name
+  %small
+    = link_to '+', new_project_path, class: 'new-project-link'
+= render('issues/form', project: project, issue: Issue.new)
+
+%h2 Keep
+= render('issues/issues', issues: project.issues, status: :keep)
+
+%h2 Problem
+= render('issues/issues', issues: project.issues, status: :problem)
+
+%h2 Try
+= render('issues/issues', issues: project.issues, status: :try)
