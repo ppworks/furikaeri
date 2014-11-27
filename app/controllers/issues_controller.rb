@@ -13,7 +13,7 @@ class IssuesController < ApplicationController
 
   def destroy
     if @issue.destroy
-      redirect_to :back, notice: 'deleted new issue'
+      redirect_to :back, notice: 'deleted an issue'
     else
       redirect_to :back, notice: @issue.errors.full_messages.join(',')
     end
