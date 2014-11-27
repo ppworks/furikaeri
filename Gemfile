@@ -9,12 +9,12 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'enumerize'
+gem 'factory_girl_rails'
 
 group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
-  gem 'factory_girl_rails'
   gem 'faker'
-  gem 'database_cleaner'
+  gem 'database_rewinder'
   gem 'capybara'
 end

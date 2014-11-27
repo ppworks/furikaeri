@@ -10,12 +10,18 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   config.before(:suite) do
-    DatabaseCleaner.strategy = :truncation
+    DatabaseRewinder.strategy = :truncation
   end
 
-  config.after(:each) do |example|
-    DatabaseCleaner.clean
+  config.before(:each) do
+    DatabaseRewinder.clean_all
+    load "#{Rails.root}/db/seeds.rb"
   end
+
+  config.after(:each) do
+    DatabaseRewinder.clean
+  end
+
   config.include FactoryGirl::Syntax::Methods
   Faker::Config.locale = :en
 end
