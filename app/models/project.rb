@@ -1,6 +1,7 @@
 class Project < ActiveRecord::Base
   validates :key, uniqueness: true
   before_validation :set_key
+  has_many :issues
 
   def to_param
     key
