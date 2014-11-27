@@ -1,5 +1,8 @@
 {
   "name": "Furikaeri",
   "description": "KPT tool",
-  "repository": "https://github.com/ppworks/furikaeri"
+  "repository": "https://github.com/ppworks/furikaeri",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:seed"
+  }
 }
