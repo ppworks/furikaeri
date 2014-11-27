@@ -1,0 +1,4 @@
+= form_for([project, issue]) do |f|
+  = f.text_field(:title)
+  = f.select(:status, Issue.status.options)
+  = f.submit

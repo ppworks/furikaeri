@@ -1,0 +1,3 @@
+%ul{class: status}
+  = content_tag_for(:li, issues.with_status(status)) do |issue|
+    = render('issues/issue', issue: issue)
