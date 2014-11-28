@@ -1,1 +1,2 @@
 asset 'normalize.css'
+asset 'jquery-ujs'
