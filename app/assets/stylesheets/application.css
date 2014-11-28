@@ -11,6 +11,6 @@
  * file per style scope.
  *
  *= require normalize.css/normalize.css
- *= require_tree .
- *= require_self
+ *= require components-font-awesome/scss/font-awesome
+ *= require main
  */
