@@ -1,6 +1,7 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "normalize.css": "latest"
+    "normalize.css": "latest",
+    "jquery-ujs": "latest"
   }
 }
