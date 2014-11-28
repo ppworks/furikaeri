@@ -18,3 +18,7 @@ group :development, :test do
   gem 'database_rewinder'
   gem 'capybara'
 end
+
+group :production do
+  gem 'rails_12factor'
+end
