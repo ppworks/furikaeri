@@ -1,7 +1,7 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-    "normalize.css": "latest",
+    "reset-css": "latest",
     "jquery-ujs": "latest",
     "components-font-awesome": "latest"
   }
