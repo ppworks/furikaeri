@@ -12,14 +12,14 @@ body {
 }
 
 .alert-success {
-  font-size: 12px;
-  padding-top: 15px;
-  background: rgba(#000000, .5);
-  color: #ffffff;
+  font-size: 18px;
+  padding-top: 30px;
+  background: $notification-bgcolor;
+  color: $notification-color;
   position: absolute;
   z-index: 1000;
   top: 0;
-  height: 30px;
+  height: 50px;
   width: 100%;
   text-align: center;
 }
