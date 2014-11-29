@@ -31,22 +31,25 @@
 }
 
 .issue__status-title {
-  margin-bottom: $margin-half;
   font-size: 20px;
   color: #c1c1c1;
 }
 
+.issue__list {
+  min-height: $margin-half;
+}
+
 .issue {
+  &:first-child {
+    margin-top: $margin-half;
+  }
+  cursor: move;
   font-size: 14px;
   margin-bottom: $margin-quarter;
   padding: $margin-quarter;
   //border: solid $item-border-color 1px;
   border-radius: 5px;
   background-color: $issue-bgcolor;
-  @include transition-duration(0.5s);
-  .hover, &:hover {
-    background-color: #fefefe;
-  }
 }
 
 .issue__remove-button {
