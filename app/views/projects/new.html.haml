@@ -2,12 +2,12 @@
 .project
   %h1.project__title
     = render('form', project: @project)
-  .issues
-    .issue__status.issue__status-keep
-      %h2.issue__status-title Keep
+.issues
+  .issue__kpt.issue__keep
+    %h2.issue__heading Keep
 
-    .issue__status.issue__status-problem
-      %h2.issue__status-title Problem
+  .issue__kpt.issue__problem
+    %h2.issue__heading Problem
 
-    .issue__status.issue__status-try
-      %h2.issue__status-title Try
+  .issue__kpt.issue__try
+    %h2.issue__heading Try

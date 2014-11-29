@@ -1,28 +1,28 @@
 .issues {
   position: relative;
-  margin-bottom: $margin;
+  margin: $margin-half $margin;
   height: 100%;
 }
 
-.issue__status {
+.issue__kpt {
   box-sizing: border-box;
   top: 0;
   width: 50%;
   margin: 0 0 $margin-half 0;
 }
 
-.issue__status-keep {
+.issue__keep {
   padding: $margin-quarter $margin-half $margin 0;
   position: relative;
   border-bottom: solid $border-color 1px;
 }
 
-.issue__status-problem {
+.issue__problem {
   padding: $margin-quarter $margin-half $margin 0;
   position: relative;
 }
 
-.issue__status-try {
+.issue__try {
   position: absolute;
   right: 0;
   min-height: 100%;
@@ -30,7 +30,7 @@
   border-left: solid $border-color 1px;
 }
 
-.issue__status-title {
+.issue__heading {
   font-size: 20px;
   color: #c1c1c1;
 }
