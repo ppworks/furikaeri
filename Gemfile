@@ -13,6 +13,7 @@ gem 'bower-rails'
 gem 'compass-rails'
 gem 'ranked-model'
 gem 'pusher'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'spring'
