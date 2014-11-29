@@ -3,6 +3,7 @@
   "dependencies": {
     "reset-css": "latest",
     "jquery-ujs": "latest",
+    "jquery-ui": "latest",
     "components-font-awesome": "latest"
   }
 }

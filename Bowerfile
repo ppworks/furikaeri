@@ -1,3 +1,4 @@
 asset 'reset-css'
 asset 'jquery-ujs'
+asset 'jquery-ui'
 asset 'components-font-awesome'
