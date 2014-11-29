@@ -1,4 +1,6 @@
 class Issue < ActiveRecord::Base
+  include RankedModel
+  ranks :priority
   extend Enumerize
 
   KPT = %w(keep problem try)

@@ -1,6 +1,6 @@
 class IssuesController < ApplicationController
   before_action :set_project
-  before_action :set_issue, only: [:destroy]
+  before_action :set_issue, only: [:sort, :destroy]
   before_action :set_new_issue, only: [:create]
 
   def create
@@ -19,6 +19,11 @@ class IssuesController < ApplicationController
     end
   end
 
+  def sort
+    @issue.update(issue_params)
+    render nothing: true
+  end
+
   private
 
   def set_project
@@ -26,7 +31,7 @@ class IssuesController < ApplicationController
   end
 
   def set_issue
-    @issue = @project.issues.find(params[:id])
+    @issue = @project.issues.find(params[:id]||params[:issue_id])
   end
 
   def set_new_issue
@@ -34,6 +39,6 @@ class IssuesController < ApplicationController
   end
 
   def issue_params
-    params.require(:issue).permit(:title, :status)
+    params.require(:issue).permit(:title, :status, :priority_position)
   end
 end

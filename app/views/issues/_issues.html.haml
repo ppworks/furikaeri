@@ -1,3 +1,5 @@
-%ul{class: "issue__list #{status}"}
-  = content_tag_for(:li, issues.with_status(status).order(:id)) do |issue|
-    = render('issues/issue', issue: issue)
+%ul{class: "issue__list #{status}", data: { status: status }}
+  - issues.with_status(status).rank(:priority).each do |issue|
+    %li.issue{data: { model_name: 'issue',
+                      update_url: project_issue_sort_path(issue.project, issue) }}
+      = render('issues/issue', issue: issue)

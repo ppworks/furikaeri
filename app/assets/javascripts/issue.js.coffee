@@ -7,6 +7,7 @@ class Issue
 
   init: ->
     @listen()
+    @listen_sortable()
 
   listen: ->
     $(document).on 'mouseover', '.issue__add-button', (e) ->
@@ -19,3 +20,26 @@ class Issue
         $issue__form.hide()
       else
         $issue__form.find('form').submit()
+
+  listen_sortable: ->
+    $("ul.issue__list").sortable({
+      connectWith: ".issue__list"
+      receive: (e, ui) ->
+        handle_change(e, ui, @)
+      update: (e, ui) ->
+        handle_change(e, ui, @)
+    }).disableSelection()
+
+    handle_change = (e, ui, ref) ->
+      $item  = $(ui.item)
+      $ref   = $(ref)
+      params = { _method: 'put' }
+      params[$item.data().modelName] =
+        priority_position: $item.index()
+        status: $ref.data().status
+      $.ajax
+        url: $item.data().updateUrl
+        type: 'POST'
+        dataType: 'json'
+        data: params
+      return
