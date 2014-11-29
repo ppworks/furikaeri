@@ -1,14 +1,22 @@
-%h1
-  = project.name
-  %small
-    = link_to '+', new_project_path, class: 'new-project-link'
-= render('issues/form', project: project, issue: Issue.new)
+.project
+  %h1.project__title
+    = project.name
+    %small.project__new-link
+      = link_to new_project_path, class: 'new-project-link' do
+        = t('.new_project_link')
 
-%h2 Keep
-= render('issues/issues', issues: project.issues, status: :keep)
+  .issues
+    .issue__status.issue__status-keep
+      %h2.issue__status-title Keep
+      = render('issues/issues', issues: project.issues, status: :keep)
+      = render('issues/form', project: project, status: :keep)
 
-%h2 Problem
-= render('issues/issues', issues: project.issues, status: :problem)
+    .issue__status.issue__status-problem
+      %h2.issue__status-title Problem
+      = render('issues/issues', issues: project.issues, status: :problem)
+      = render('issues/form', project: project, status: :problem)
 
-%h2 Try
-= render('issues/issues', issues: project.issues, status: :try)
+    .issue__status.issue__status-try
+      %h2.issue__status-title Try
+      = render('issues/issues', issues: project.issues, status: :try)
+      = render('issues/form', project: project, status: :try)
