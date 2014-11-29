@@ -2,13 +2,12 @@ require 'rails_helper'
 
 shared_examples_for 'create new issue' do
   let(:new_issue) { build(:issue, status, project: project) }
-
+  let(:form_id) { "#new_#{status}_issue_form" }
   feature do
     scenario do
       visit project_path(project)
-      within('#new_issue') do
+      within(form_id) do
         find('#issue_title').set(new_issue.title)
-        select(new_issue.status_text, from: 'issue_status')
         find('input[type=submit]').click
       end
 
