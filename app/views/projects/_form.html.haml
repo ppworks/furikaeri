@@ -1,4 +1,4 @@
 = project.errors.full_messages.join(',')
 = form_for(project) do |f|
-  = f.text_field(:name, placeholder: 'project name')
+  = f.text_field(:name, class: 'project__form__name', placeholder: 'Input project name')
   = f.submit

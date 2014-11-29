@@ -1,6 +1,6 @@
 .issue.issue__form.hidden
   = form_for([project, Issue.new], html: {id: "new_#{status}_issue_form"}) do |f|
-    = f.text_field(:title, placeholder: 'issue', autocomplete: 'off')
+    = f.text_field(:title, class: 'issue__form__title', placeholder: 'issue', autocomplete: 'off')
     = f.hidden_field(:status, value: status)
     = f.submit
-%i.issue__add-button.fa.fa-plus-circle.js-show
+%i.issue__add-button.fa.fa-plus-circle
