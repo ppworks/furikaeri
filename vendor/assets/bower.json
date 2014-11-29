@@ -4,6 +4,7 @@
     "reset-css": "latest",
     "jquery-ujs": "latest",
     "jquery-ui": "latest",
-    "components-font-awesome": "latest"
+    "components-font-awesome": "latest",
+    "pusher": "latest"
   }
 }
