@@ -12,6 +12,7 @@ gem 'factory_girl_rails'
 gem 'bower-rails'
 gem 'compass-rails'
 gem 'ranked-model'
+gem 'pusher'
 
 group :development, :test do
   gem 'spring'
