@@ -11,6 +11,7 @@ gem 'enumerize'
 gem 'factory_girl_rails'
 gem 'bower-rails'
 gem 'compass-rails'
+gem 'ranked-model'
 
 group :development, :test do
   gem 'spring'
