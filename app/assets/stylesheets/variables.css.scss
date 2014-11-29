@@ -7,3 +7,6 @@ $border-color: #343434;
 $issue-bgcolor: #ffffff;
 $add-color: rgba(247, 159, 197, .5);
 $remove-color: #888888;
+
+$notification-bgcolor: rgba(227, 247, 159, .8);
+$notification-color: darken($notification-bgcolor, 50);
