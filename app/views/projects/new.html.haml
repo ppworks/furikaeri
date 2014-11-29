@@ -1,1 +1,13 @@
-= render('form', project: @project)
+- content_for(:body_class, 'project-new')
+.project
+  %h1.project__title
+    = render('form', project: @project)
+  .issues
+    .issue__status.issue__status-keep
+      %h2.issue__status-title Keep
+
+    .issue__status.issue__status-problem
+      %h2.issue__status-title Problem
+
+    .issue__status.issue__status-try
+      %h2.issue__status-title Try

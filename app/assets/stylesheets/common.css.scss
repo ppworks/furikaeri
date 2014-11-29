@@ -4,9 +4,22 @@ html, body {
 }
 
 body {
-  background-color: #efefef;
+  background-color: $bgcolor;
 }
 
 .hidden {
   display: none;
+}
+
+.alert-success {
+  font-size: 12px;
+  padding-top: 15px;
+  background: rgba(#000000, .5);
+  color: #ffffff;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  height: 30px;
+  width: 100%;
+  text-align: center;
 }

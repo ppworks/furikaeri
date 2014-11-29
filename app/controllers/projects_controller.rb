@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show]
+  before_action :set_project, only: [:show, :update]
   before_action :set_new_project, only: [:new, :create]
 
   def new
@@ -10,6 +10,15 @@ class ProjectsController < ApplicationController
       redirect_to @project, notice: 'created new project'
     else
       render 'new'
+    end
+  end
+
+  def update
+    @project.attributes = project_params
+    if @project.save
+      redirect_to @project, notice: 'update project'
+    else
+      redirect_to :back, notice: @project.errors.full_messages.join(',')
     end
   end
 
