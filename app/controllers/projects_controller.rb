@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  before_filter :set_project, only: [:show]
-  before_filter :set_new_project, only: [:new, :create]
+  before_action :set_project, only: [:show]
+  before_action :set_new_project, only: [:new, :create]
 
   def new
   end

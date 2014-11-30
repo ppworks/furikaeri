@@ -1,7 +1,7 @@
 class IssuesController < ApplicationController
-  before_filter :set_project
-  before_filter :set_issue, only: [:destroy]
-  before_filter :set_new_issue, only: [:create]
+  before_action :set_project
+  before_action :set_issue, only: [:destroy]
+  before_action :set_new_issue, only: [:create]
 
   def create
     if @issue.save
