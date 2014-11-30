@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery-ujs
 //= require jquery-ui/jquery-ui.min
+//= require pusher
 //= require_tree .

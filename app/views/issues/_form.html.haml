@@ -1,5 +1,7 @@
 .issue.issue__form.hidden
-  = form_for([project, Issue.new], html: {id: "new_#{status}_issue_form"}) do |f|
+  = form_for([project, Issue.new],
+             remote: true,
+             html: {id: "new_#{status}_issue_form"}) do |f|
     = f.text_field(:title, class: 'issue__form__title', placeholder: 'issue', autocomplete: 'off')
     = f.hidden_field(:status, value: status)
     = f.submit

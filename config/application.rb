@@ -26,5 +26,11 @@ module Furikaeri
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :ja
+    # pusher setteing
+    Pusher.host   = ENV['PUSHER_HOST']
+    Pusher.port   = ENV['PUSHER_PORT'].to_i
+    Pusher.app_id = ENV['PUSHER_APP_ID']
+    Pusher.key    = ENV['PUSHER_KEY']
+    Pusher.secret = ENV['PUSHER_SECRET']
   end
 end

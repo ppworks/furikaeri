@@ -8,4 +8,10 @@ class Issue < ActiveRecord::Base
 
   validates :title, presence: true
   belongs_to :project
+  after_save :post_to_pusher
+  after_destroy :post_to_pusher
+
+  def post_to_pusher
+    Pusher["presence-furikaeri_#{self.project.key}"].trigger('updated', nil) unless Rails.env.test?
+  end
 end

@@ -6,7 +6,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     :javascript
-      var rack_env = "#{Rails.env}"
+      var rack_env = "#{Rails.env}";
+      var PUSHER_HOST = "#{Pusher.host}";
+      var PUSHER_KEY = "#{Pusher.key}";
   %body{class: "#{yield(:body_class)}"}
     = render('messages')
     = yield

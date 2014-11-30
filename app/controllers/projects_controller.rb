@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :update]
   before_action :set_new_project, only: [:new, :create]
+  layout proc { |controller| controller.request.xhr? ? false : 'application' }
 
   def new
   end

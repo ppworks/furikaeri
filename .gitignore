@@ -17,6 +17,7 @@
 
 # Ignore personal settings
 .rspec
+.env
 
 # bower
 /vendor/assets/bower_components

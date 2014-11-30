@@ -1,3 +1,6 @@
 = issue.title
-= link_to(url_for([issue.project, issue]), method: :delete, class: 'delete-link') do
+= link_to(url_for([issue.project, issue]),
+                  remote: true,
+                  method: :delete,
+                  class: 'delete-link') do
   %i.issue__remove-button.fa.fa-trash

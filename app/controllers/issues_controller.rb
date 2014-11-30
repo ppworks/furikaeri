@@ -5,7 +5,7 @@ class IssuesController < ApplicationController
 
   def create
     if @issue.save
-      redirect_to :back, notice: 'created new issue'
+      render nothing: true, status: :ok
     else
       redirect_to :back, notice: @issue.errors.full_messages.join(',')
     end
@@ -13,7 +13,7 @@ class IssuesController < ApplicationController
 
   def destroy
     if @issue.destroy
-      redirect_to :back, notice: 'deleted an issue'
+      render nothing: true, status: :ok
     else
       redirect_to :back, notice: @issue.errors.full_messages.join(',')
     end

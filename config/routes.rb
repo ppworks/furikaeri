@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :issues, only: [:create, :destroy] do
       put :sort
     end
+    resource :pusher_authentication, only: [:create]
   end
   root to: 'pages#top'
 end
