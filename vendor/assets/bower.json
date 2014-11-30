@@ -1,0 +1,8 @@
+{
+  "name": "dsl-generated dependencies",
+  "dependencies": {
+    "reset-css": "latest",
+    "jquery-ujs": "latest",
+    "components-font-awesome": "latest"
+  }
+}

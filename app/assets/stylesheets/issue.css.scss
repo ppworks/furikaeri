@@ -1,0 +1,94 @@
+.issues {
+  position: relative;
+  margin: $margin-half $margin;
+  height: 100%;
+}
+
+.issue__kpt {
+  box-sizing: border-box;
+  top: 0;
+  width: 50%;
+  margin: 0 0 $margin-half 0;
+}
+
+.issue__keep {
+  padding: $margin-quarter $margin-half $margin 0;
+  position: relative;
+  border-bottom: solid $border-color 1px;
+}
+
+.issue__problem {
+  padding: $margin-quarter $margin-half $margin 0;
+  position: relative;
+}
+
+.issue__try {
+  position: absolute;
+  right: 0;
+  min-height: 100%;
+  padding: $margin-quarter 0 $margin-quarter $margin-half;
+  border-left: solid $border-color 1px;
+}
+
+.issue__heading {
+  font-size: 20px;
+  color: #c1c1c1;
+}
+
+.issue__list {
+  min-height: $margin-half;
+}
+
+.issue {
+  &:first-child {
+    margin-top: $margin-half;
+  }
+  cursor: move;
+  font-size: 14px;
+  margin-bottom: $margin-quarter;
+  padding: $margin-quarter;
+  //border: solid $item-border-color 1px;
+  border-radius: 5px;
+  background-color: $issue-bgcolor;
+}
+
+.issue__remove-button {
+  @include button;
+  float: right;
+  font-size: 20px;
+  @include transition-duration(0.2s);
+  color: darken($issue-bgcolor, 5);
+  .hover, &:hover {
+    color: $remove-color;
+  }
+}
+
+.issue__add-button {
+  @include button;
+  float: right;
+  font-size: 40px;
+  color: darken($add-color, 5);
+  .hover, &:hover {
+    color: $add-color;
+  }
+}
+
+.issue__form {
+  @include balloon-bottom(10px, #ffffff, 10px);
+  position: relative;
+  form {
+    position: relative;
+    input[type=text] {
+      width: 100%;
+      font-size: 22px;
+      border: none;
+      color: #aaaaaa;
+      &:focus {
+        outline: none;
+      }
+    }
+    input[type=submit] {
+      display: none;
+    }
+  }
+}

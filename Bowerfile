@@ -1,0 +1,3 @@
+asset 'reset-css'
+asset 'jquery-ujs'
+asset 'components-font-awesome'

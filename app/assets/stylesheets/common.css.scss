@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: $bgcolor;
+}
+
+.hidden {
+  display: none;
+}
+
+.alert-success {
+  font-size: 18px;
+  padding-top: 30px;
+  background: $notification-bgcolor;
+  color: $notification-color;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}

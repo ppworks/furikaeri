@@ -1,7 +1,7 @@
 class Project < ActiveRecord::Base
   validates :name, presence: true
   validates :key, uniqueness: true
-  before_validation :set_key
+  before_validation :set_key, on: :create
   has_many :issues, dependent: :destroy
 
   def to_param

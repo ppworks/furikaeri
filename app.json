@@ -4,5 +4,8 @@
   "repository": "https://github.com/ppworks/furikaeri",
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate && bundle exec rake db:seed"
+  },
+  "env": {
+    "BUILDPACK_URL": "https://github.com/ddollar/heroku-buildpack-multi.git"
   }
 }
